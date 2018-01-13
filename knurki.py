@@ -9,4 +9,4 @@ sources = SOURCES(app)(
 )
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="51.15.78.247", port=8888)
