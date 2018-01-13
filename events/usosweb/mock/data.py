@@ -10,7 +10,7 @@ def mock_data():
         ("Analiza Matematyczna", 213),
         ("Teoria Informacji", 214)
     ]
-    now = datetime.now().replace(second=0) - timedelta(hours=1, minutes=56)
+    now = datetime.now().replace(second=0) - timedelta(hours=1, minutes=51)
     return [
         Event(
             name,
