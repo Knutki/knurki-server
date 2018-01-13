@@ -1,12 +1,12 @@
 from flask import Flask
+from events import sources as events_sources
+from utils import SOURCES
 
 app = Flask(__name__)
 
-
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
-
+sources = SOURCES(app)(
+    events_sources
+)
 
 if __name__ == '__main__':
     app.run()
