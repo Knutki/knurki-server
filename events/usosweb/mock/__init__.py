@@ -6,5 +6,4 @@ mock_blueprint = Blueprint('mock', __name__)
 
 @mock_blueprint.route('/events/today')
 def today_events():
-    print(mock_data())
     return jsonify(mock_data())
