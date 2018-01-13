@@ -24,7 +24,8 @@ def mock_data(start=None):
             WUTLocation(
                 "Mini",
                 str(room)
-            )
+            ),
+            "Wykład"
         ).as_dict()
         for i, (name, room) in enumerate(subjects)
     ]
