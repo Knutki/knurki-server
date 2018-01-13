@@ -17,6 +17,6 @@ def current_period_events():
     start = now - timedelta(days=now.weekday())
     return jsonify([
         {
-            "date": (start + timedelta(days=i)).strftime("%Y-%m-%d"),
+            "date": (start.replace(hour=0, minute=0) + timedelta(days=i)).strftime("%Y-%m-%d %H:%M"),
             "events": mock_data(start + timedelta(days=i))
         } for i in range(2*WEEK)])
