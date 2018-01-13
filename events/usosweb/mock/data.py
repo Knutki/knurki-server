@@ -5,17 +5,17 @@ from events.usosweb.wutlocation import WUTLocation
 
 def mock_data():
     subjects = [
-        ("Teoria", 212),
-        ("Programowanie", 211),
-        ("Matematyka", 213),
-        ("Filozofia", 214)
+        ("Matematyka Dyskretna", 212),
+        ("Inżynieria Oprogramowania", 211),
+        ("Analiza Matematyczna", 213),
+        ("Teoria Informacji", 214)
     ]
-    now = datetime.now().replace(minute=0, second=0) - timedelta(hours=3)
+    now = datetime.now().replace(second=0) - timedelta(hours=1, minutes=56)
     return [
         Event(
             name,
-            now + timedelta(hours=2*i),
-            now + timedelta(hours=2*(i+1)),
+            now + timedelta(hours=2*i, minutes=5*i),
+            now + timedelta(hours=2*(i+1), minutes=5*i),
             WUTLocation(
                 "Mini",
                 str(room)
