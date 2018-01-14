@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Indoor Available</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            background: #353632;
+        }
+        .text {
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            color: #30BCED;
+            font-size: 20vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text" id="text">Witaj,<br/>{{ name }}</div>
+    </div>
+</body>
+</html>

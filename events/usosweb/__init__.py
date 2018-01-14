@@ -2,7 +2,7 @@ from datetime import timedelta, datetime
 from flask import session, Blueprint, jsonify
 
 from events.event import Event
-from events.usosweb.oauth import usos
+from events.usosweb.oauth import usos, user_info
 from events.usosweb.wutlocation import WUTLocation
 
 usos_blueprint = Blueprint('usos', __name__)
@@ -10,7 +10,7 @@ usos_blueprint = Blueprint('usos', __name__)
 
 @usos_blueprint.route("/user")
 def get_user_info():
-    return jsonify(usos.get("https://apps.usos.pw.edu.pl/services/users/user").data.copy())
+    return jsonify(user_info())
 
 
 @usos_blueprint.route("/events/currentPeriod")
